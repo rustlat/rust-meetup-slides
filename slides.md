@@ -55,6 +55,26 @@ hide: false
 ---
 
 ---
+
+# Punto en un plano
+
+Structs
+
+<div grid="~ cols-2 gap-2" m="t-2">
+<div>
+```rust
+struct Point {
+    x: f32,
+    y: f32
+}
+```
+<br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</div>
+<img border="rounded" src="asstets/punto_en_plano.svg" alt="">
+</div>
+
+---
 src: ./pages/immutability-b-default.md
 hide: false
 ---
@@ -81,22 +101,7 @@ Problem
 
 ---
 
-# Structs and Traits
-
-```rust
-struct Point {
-    x: f32,
-    y: f32
-}
-    
-trait Quadrant {
-    fn get_quadrant(self) -> QuadrantNum;
-}
-```
-
----
-
-# Enumerators, Structures
+# Enumerators and Traits
 
 ```rust
 enum QuadrantNum {
@@ -106,10 +111,9 @@ enum QuadrantNum {
     III,
     IV
 }
-   
-struct Point {
-    x: f32,
-    y: f32
+
+trait Quadrant {
+    fn get_quadrant(self) -> QuadrantNum;
 }
 ```
 
@@ -120,7 +124,7 @@ struct Point {
 
 ```rust
 impl Quadrant for Point {
-    fn get_quadrant(self) -> quadrantnum {
+    fn get_quadrant(self) -> QuadrantNum {
         if self.x > 0.0 && self.y >= 0.0 {
             QuadrantNum::I
         } else if self.x <= 0.0 && self.y > 0.0 {
@@ -180,14 +184,14 @@ hide: false
 
 # Hands On
 
-1. Hello World
-2. CRUD with _Poem_
-3. Embedded Programming
-4. LLMs with Rust
+1. 
+2. 
+3. 
+4. 
 
 ---
 
-# 1. Hello World
+# Hello World in a Web Server
 <br>
 
 ```rust
@@ -197,39 +201,8 @@ fn main() {
 ```
 
 ---
+
+---
 src: ./pages/hands-on/crud-poem.md
 hide: false
-
 ---
-
-# 3. Embedded Programming
-
----
-
-# 4. LLMs with Rust
-<br>
-
-```rust
-use auto_rust::llm_tool;
-     
-#[llm_tool]
-// This function returns n^2 + 1 of a number
-fn n_squared_plus_one(n: u64) -> u64 {
-    todo!()
-}
-    
-fn main() {
-    let res = n_squared_plus_one(4);
-    
-    println!("{:?}", res);
-}
-```
-
----
-
-# 4. LLMs with Rust
-<br>
-
-```bash
-echo 'respuesta de auto-rust'
-```
