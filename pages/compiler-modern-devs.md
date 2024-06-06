@@ -1,9 +1,23 @@
+---
+layout: image-right
+image: https://www.rust-lang.org/logos/rust-logo-blk.svg
+---
+
 # Compiler for Modern Developers
 
-- **Cargo toolset** (e.g. fmt, clippy, code analyzer)
+<!-- <div grid="~ cols-2 gap-2" m="t-2">
+<div>
+- <b>Cargo toolset<b> (e.g. fmt, clippy, code analyzer)
 - **Compiler's feedback**
 - **Incremental compilation**
+</div>
 
+<img border="rounded" src="asstets/rust-ide-online-editor-compiler.original.png" alt=""> -->
+<!-- </div> -->
+
+- Cargo toolset (e.g. fmt, clippy, code analyzer)
+- **Compiler's feedback**
+- **Incremental compilation**
 
 <style>
 h1 {

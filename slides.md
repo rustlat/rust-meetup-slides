@@ -80,13 +80,14 @@ struct Point {
 }
 ```
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Tipado Algebraico puede ser visto como conjuntos.
 
 </div>
 
 <img border="rounded" src="asstets/particion_v2.svg" alt="">
 </div>
 <br>
+
 ---
 src: ./pages/immutability-b-default.md
 hide: false
@@ -180,7 +181,11 @@ src: ./pages/metaprogramming.md
 hide: false
 ---
 
-# Hello World in a Web Server
+---
+
+# Poem and OpenAPI
+Hello World in a Web Server
+
 <br>
 
 ```rust
@@ -191,4 +196,27 @@ fn main() {
 
 ---
 
-# 
+# Chat with `async-openai`
+
+```rust
+fn main() {
+    println!("Hello, World!");
+}
+```
+
+---
+layout: center
+---
+# Gracias!
+
+<style>
+h1 {
+  background-color: #2B90B6;
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
