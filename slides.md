@@ -58,6 +58,17 @@ hide: false
 
 # Punto en un plano
 
+<div grid="~ cols-2 gap-2" m="t-2">
+<img border="rounded" src="asstets/punto_con_ejes_plano.svg" alt="">
+<img border="rounded" src="asstets/quadrants_and_center.svg" alt="">
+</div>
+
+
+
+---
+
+# Algebraic Typing
+
 Structs
 
 <div grid="~ cols-2 gap-2" m="t-2">
@@ -68,12 +79,14 @@ struct Point {
     y: f32
 }
 ```
-<br>
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-</div>
-<img border="rounded" src="asstets/punto_en_plano.svg" alt="">
+
 </div>
 
+<img border="rounded" src="asstets/particion_v2.svg" alt="">
+</div>
+<br>
 ---
 src: ./pages/immutability-b-default.md
 hide: false
@@ -84,24 +97,9 @@ layout: center
 class: text-center
 ---
 
-# Algebraic Typing
-
 # Pattern Matching = Robustness
 
----
-
-# Algebraic Typing
-
-Problem
-<div grid="~ cols-2 gap-2" m="t-2">
-<img border="rounded" src="https://content.nroc.org/DevelopmentalMath/COURSE_TEXT2_RESOURCE/U13_L1_T1_text_final_4_files/image002.jpg" alt="">
-
-<img border="rounded" src="asstets/particion_v1.svg" alt="">
-</div>
-
----
-
-# Enumerators and Traits
+Enumerators and Traits
 
 ```rust
 enum QuadrantNum {
@@ -119,7 +117,7 @@ trait Quadrant {
 
 ---
 
-### Implementing
+### Implementing **Quadrant** Trait
 <br>
 
 ```rust
@@ -144,7 +142,7 @@ impl Quadrant for Point {
 
 # Pattern Matching = Robustness
 
-match, if let pattern
+`match` keyword
 
 ```rust
 impl Point {
@@ -182,15 +180,6 @@ src: ./pages/metaprogramming.md
 hide: false
 ---
 
-# Hands On
-
-1. 
-2. 
-3. 
-4. 
-
----
-
 # Hello World in a Web Server
 <br>
 
@@ -202,7 +191,4 @@ fn main() {
 
 ---
 
----
-src: ./pages/hands-on/crud-poem.md
-hide: false
----
+# 
