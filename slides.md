@@ -5,7 +5,7 @@ theme: default
 # like them? see https://unsplash.com/collections/94734566/slidev
 background: https://cover.sli.dev
 # some information about your slides, markdown enabled
-title: Introducción a Rust
+title: Introduction to Rust
 info: |
   ## Slidev Starter Template
   Presentation slides for developers.
@@ -25,9 +25,9 @@ mdc: true
 ---
 
 ## Meetup: 
-# Introducción a Rust
+# Introduction to Rust
 
-Descubre el poder de la programación segura y eficiente con Rust
+Discover the power of safe and efficient programming with Rust
 
 <div class="pt-12">
   <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
@@ -56,14 +56,12 @@ hide: false
 
 ---
 
-# Punto en un plano
+# Point on a Plane
 
 <div grid="~ cols-2 gap-2" m="t-2">
 <img border="rounded" src="asstets/punto_con_ejes_plano.svg" alt="">
 <img border="rounded" src="asstets/quadrants_and_center.svg" alt="">
 </div>
-
-
 
 ---
 
@@ -80,8 +78,7 @@ struct Point {
 }
 ```
 
-Tipado Algebraico puede ser visto como conjuntos.
-
+Algebraic Typing can be seen as sets.
 </div>
 
 <img border="rounded" src="asstets/particion_v2.svg" alt="">
@@ -93,9 +90,7 @@ src: ./pages/immutability-b-default.md
 hide: false
 ---
 
----
-layout: center
-class: text-center
+
 ---
 
 # Pattern Matching = Robustness
