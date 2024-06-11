@@ -36,10 +36,7 @@ Discover the power of safe and efficient programming with Rust
 </div>
 
 <div class="abs-br m-6 flex gap-2">
-  <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon:edit />
-  </button>
-  <a href="https://github.com/slidevjs/slidev" target="_blank" alt="GitHub" title="Open in GitHub"
+  <a href="https://github.com/rustlat/" target="_blank" alt="GitHub" title="Open in GitHub"
     class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
     <carbon-logo-github />
   </a>
@@ -58,10 +55,18 @@ hide: false
 
 # Point on a Plane
 
-<div grid="~ cols-2 gap-2" m="t-2">
-<img border="rounded" src="asstets/punto_con_ejes_plano.svg" alt="">
-<img border="rounded" src="asstets/quadrants_and_center.svg" alt="">
+<div>
+  
+![Local Image](/pointPlane_quadrantCenter.png)
+
 </div>
+
+<style>
+h1 {
+  color: #2B90B6;
+  background-size: 100%;
+}
+</style>
 
 ---
 
@@ -81,9 +86,16 @@ struct Point {
 Algebraic Typing can be seen as sets.
 </div>
 
-<img border="rounded" src="asstets/particion_v2.svg" alt="">
+![other](/quadrantPartition.png)
 </div>
 <br>
+
+<style>
+h1 {
+  color: #2B90B6;
+  background-size: 100%;
+}
+</style>
 
 ---
 src: ./pages/immutability-b-default.md
@@ -109,6 +121,13 @@ trait Quadrant {
 }
 ```
 
+<style>
+h1 {
+  color: #2B90B6;
+  background-size: 100%;
+}
+</style>
+
 ---
 
 ### Implementing **Quadrant** Trait
@@ -132,6 +151,13 @@ impl Quadrant for Point {
 }
 ```
 
+<style>
+h3 {
+  color: #2B90B6;
+  background-size: 100%;
+}
+</style>
+
 ---
 
 # Pattern Matching
@@ -152,6 +178,13 @@ impl Point {
 }
 ```
 
+<style>
+h1 {
+  color: #2B90B6;
+  background-size: 100%;
+}
+</style>
+
 ---
 
 # Owning and Security
@@ -171,6 +204,13 @@ fn main() {
 }
 ```
 
+<style>
+h1 {
+  color: #2B90B6;
+  background-size: 100%;
+}
+</style>
+
 ---
 
 # Heap and Stack
@@ -181,9 +221,16 @@ fn main() {
     let v = vec![1, 2, 3, 4, 5];
 
     println!("Array: {:?}", arr);
-    println!("Vector: {:?}", v);lla
+    println!("Vector: {:?}", v);
 }
 ```
+
+<style>
+h1 {
+  color: #2B90B6;
+  background-size: 100%;
+}
+</style>
 
 ---
 src: ./pages/metaprogramming.md
@@ -212,6 +259,13 @@ impl Api {
 }
 ```
 
+<style>
+h1 {
+  color: #2B90B6;
+  background-size: 100%;
+}
+</style>
+
 ---
 
 # Chat with `async-openai`
@@ -237,6 +291,13 @@ println!("{}", serde_json::to_string(&request).unwrap());
 let response = client.chat().create(request).await?;
 ```
 
+<style>
+h1 {
+  color: #2B90B6;
+  background-size: 100%;
+}
+</style>
+
 ---
 layout: center
 ---
@@ -244,12 +305,7 @@ layout: center
 
 <style>
 h1 {
-  background-color: #2B90B6;
-  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
+  color: #2B90B6;
   background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
 }
 </style>
