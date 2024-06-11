@@ -93,9 +93,7 @@ hide: false
 
 ---
 
-# Pattern Matching = Robustness
-
-Enumerators and Traits
+# Enumerators and Traits
 
 ```rust
 enum QuadrantNum {
@@ -124,7 +122,7 @@ impl Quadrant for Point {
         } else if self.x <= 0.0 && self.y > 0.0 {
             QuadrantNum::II
 				} else if self.x < 0.0 && self.y <= 0.0 {
-            QuadrantNum::II
+            QuadrantNum::III
         } else if self.x >= 0.0 && self.y < 0.0 {
             QuadrantNum::IV
         } else {
@@ -136,7 +134,7 @@ impl Quadrant for Point {
 
 ---
 
-# Pattern Matching = Robustness
+# Pattern Matching
 
 `match` keyword
 
@@ -155,21 +153,37 @@ impl Point {
 ```
 
 ---
-layout: center
-class: text-center
----
 
 # Owning and Security
-# (Ownership & Borrow Checking)
+(Ownership & Borrow Checking)
 
-## **fighting the borrow checker**
+**fighting the borrow checker**
+```rust
+fn change(s: &mut String) {
+    s.push_str(", world");
+}
 
----
-layout: center
-class: text-center
+fn main() {
+    let mut s = String::from("hello");
+    change(&mut s);
+
+    change(&mut s);
+}
+```
+
 ---
 
 # Heap and Stack
+
+```rust
+fn main() {
+    let arr: [i32; 5] = [1, 2, 3, 4, 5];
+    let v = vec![1, 2, 3, 4, 5];
+
+    println!("Array: {:?}", arr);
+    println!("Vector: {:?}", v);lla
+}
+```
 
 ---
 src: ./pages/metaprogramming.md
@@ -184,8 +198,17 @@ Hello World in a Web Server
 <br>
 
 ```rust
-fn main() {
-    println!("Hello, World!");
+struct Api;
+
+#[OpenApi]
+impl Api {
+    #[oai(path = "/hello", method = "get")]
+    async fn index(&self, name: Query<Option<String>>) -> PlainText<String> {
+        match name.0 {
+            Some(name) => PlainText(format!("hello, {name}!")),
+            None => PlainText("hello!".to_string()),
+        }
+    }
 }
 ```
 
@@ -194,9 +217,24 @@ fn main() {
 # Chat with `async-openai`
 
 ```rust
-fn main() {
-    println!("Hello, World!");
-}
+let request = CreateChatCompletionRequestArgs::default()
+    .max_tokens(1024u16)
+    .model(model_name)
+    .messages([
+        ChatCompletionRequestSystemMessageArgs::default()
+            .content("You are a helpful assistant.")
+            .build()?
+            .into(),
+        ChatCompletionRequestUserMessageArgs::default()
+            .content("Hello there!")
+            .build()?
+            .into(),
+    ])
+    .build()?;
+
+println!("{}", serde_json::to_string(&request).unwrap());
+
+let response = client.chat().create(request).await?;
 ```
 
 ---
